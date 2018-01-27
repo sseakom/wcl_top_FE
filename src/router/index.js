@@ -17,7 +17,8 @@ export default new Router({
         {
             path: '/',
             name: 'home',
-            component: resolve => require(['../views/Home.vue'], resolve)
+            component: resolve => require(['../views/House.vue'], resolve)
+                // component: resolve => require(['../views/Home.vue'], resolve)
         },
         {
             path: '/log',
