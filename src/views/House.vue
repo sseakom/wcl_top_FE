@@ -4,15 +4,17 @@
 	el-table(:data="tableData",style="width: 100%",height="500",@row-click="jump")
 		el-table-column(prop="title",label="标题",width="300")
 		el-table-column(prop="type",label="户型")
-		el-table-column(prop="area",label="面积")
 		el-table-column(prop="towards",label="朝向")
 		el-table-column(prop="floor",label="楼层")
 		el-table-column(prop="community",label="小区")
 		el-table-column(prop="district",label="位置")
+		el-table-column(prop="area",label="面积")
 		el-table-column(prop="price",label="单价",width="100")
 		el-table-column(prop="total",label="总价",width="120")
 		el-table-column(prop="postdate",label="更新",width="200")
-	el-pagination(@size-change="handleSizeChange",@current-change="handleCurrentChange",:current-page="pageNo",:page-sizes="[50,100, 200, 300, 400, 10000]",:page-size="pageSize",layout="total, sizes, prev, pager, next, jumper",:total="total")
+		el-table-column(prop="company",label="中介")
+		el-table-column(prop="agent",label="经纪人")
+	el-pagination(@size-change="handleSizeChange",@current-change="handleCurrentChange",:current-page="pageNo",:page-sizes="[50, 100, 200, 300, 400, 10000]",:page-size="pageSize",layout="total, sizes, prev, pager, next, jumper",:total="total")
 </template>
 <script>
 export default {
